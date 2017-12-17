@@ -10,17 +10,15 @@ html
 		script(src="assets/js/app.js" type="text/javascript")
 		//FONT AWESOME
 		script(src="https://use.fontawesome.com/879fcc8444.js")
-	body(ng-app="angularApp" ng-controller="mainCtrl" ng-class = "{'navOpen' : navToggle}")
+	body(data-ng-app="angularApp" data-ng-controller="mainCtrl" data-ng-class = "{'navOpen' : navToggle}")
 		nav
 			div.container
-				div.logo
-					a(href="#") Logo
-				div.mobileMenu(ng-click = "navToggle = ! navToggle" ng-class = "{'navOpen' : navToggle}")
+				div.mobileMenu(data-ng-click = "navToggle = ! navToggle" data-ng-class = "{'navOpen' : navToggle}")
 					span
-				ul(ng-class = "{'navOpen' : navToggle}")
+				ul(data-ng-class = "{'navOpen' : navToggle}")
 					li
-						a(href="#about") About
+						a(data-ng-click = "navToggle = ! navToggle" href="#about") About
 					li
-						a(href="#services") Services
+						a(data-ng-click = "navToggle = ! navToggle" href="#services") Services
 					li
-						a(href="#book") Book
+						a(data-ng-click = "navToggle = ! navToggle" href="#book") Book

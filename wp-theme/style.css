@@ -1,0 +1,416 @@
+/*
+Theme Name: MolloyKaye
+Theme URI: molloykayeretail.com
+Author: Avery Thomas
+Author URI: averyethomas.com
+Description: Theme created by Avery Thomas for Molloy Kaye
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: INSERT TAGS HERE SEPARATED BY COMMAS
+Text Domain: themename
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/*
+------------------------------
+TABLE OF CONTENTS
+------------------------------
+01. STYLE RESET
+02. TYPOGRAPHY
+03. CONTAINERS
+04. NAVIGATION
+05. HERO IMAGE
+06. HOME PAGE
+07. SINGLE PAGE
+08. PRESS PAGE
+09. LISTINGS PAGE
+10. INDIVIDUAL LISTING PAGE
+11. CONTACT PAGE
+12. INDIVIDUAL PEOPLE PAGE
+13. LISTINGS CONTAINER
+14. FORM
+15. FOOTER
+------------------------------
+
+*/
+/*
+------------------------------
+01.STYLE RESET
+------------------------------
+*/
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/*
+------------------------------
+02. TYPOGRAPHY
+------------------------------
+*/
+html {
+  font-size: 10px; }
+
+body {
+  overflow-x: hidden; }
+
+h1, h2, h3, h4, h5, h6, p, a, small, b, strong, em, i {
+  font-family: "Raleway", sans-serif; }
+
+h2 {
+  font-weight: 300;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin: 0 0 3rem;
+  color: #21325F; }
+
+h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: #FFEEE3; }
+
+h6 {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 300;
+  margin: 0 0 1rem;
+  color: #FFEEE3; }
+
+p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+  margin: 0 0 1rem;
+  color: #21325F; }
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 2rem; }
+
+/*
+------------------------------
+03. CONTAINERS
+------------------------------
+*/
+.container {
+  width: 100%;
+  padding: 0 1.5rem;
+  max-width: 992px;
+  margin: 0 auto; }
+
+/*
+------------------------------
+04. NAVIGATION
+------------------------------
+*/
+.navOpen {
+  overflow-y: hidden; }
+  .navOpen nav {
+    overflow: visible; }
+
+nav {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 100; }
+  nav .container {
+    max-width: 100%;
+    padding: 0 1.5rem; }
+    nav .container .mobileMenu {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      float: right;
+      z-index: 1000;
+      position: relative;
+      top: 10px; }
+      nav .container .mobileMenu span {
+        position: absolute;
+        height: .3rem;
+        width: 2rem;
+        right: 0;
+        top: 50%;
+        margin-top: -0.3rem;
+        background: #FFEEE3; }
+        nav .container .mobileMenu span:before {
+          position: absolute;
+          content: "";
+          height: .3rem;
+          width: 2rem;
+          top: -.7rem;
+          display: block;
+          background: #FFEEE3;
+          -webkit-transition: top 0.3s 0.3s, -webkit-transform 0.3s;
+          transition: top 0.3s 0.3s, -webkit-transform 0.3s;
+          transition: transform 0.3s, top 0.3s 0.3s;
+          transition: transform 0.3s, top 0.3s 0.3s, -webkit-transform 0.3s; }
+        nav .container .mobileMenu span:after {
+          position: absolute;
+          content: "";
+          height: .3rem;
+          width: 2rem;
+          top: .7rem;
+          display: block;
+          background: #FFEEE3;
+          -webkit-transition: top 0.3s 0.3s, -webkit-transform 0.3s;
+          transition: top 0.3s 0.3s, -webkit-transform 0.3s;
+          transition: transform 0.3s, top 0.3s 0.3s;
+          transition: transform 0.3s, top 0.3s 0.3s, -webkit-transform 0.3s; }
+      nav .container .mobileMenu.navOpen span {
+        background: transparent; }
+        nav .container .mobileMenu.navOpen span:before {
+          top: 0;
+          background: #FFEEE3;
+          height: .3rem;
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          -webkit-transition: top 0.3s, -webkit-transform 0.3s 0.3s;
+          transition: top 0.3s, -webkit-transform 0.3s 0.3s;
+          transition: top 0.3s, transform 0.3s 0.3s;
+          transition: top 0.3s, transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s; }
+        nav .container .mobileMenu.navOpen span:after {
+          top: 0;
+          background: #FFEEE3;
+          height: .3rem;
+          -webkit-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
+          -webkit-transition: top 0.3s, -webkit-transform 0.3s 0.3s;
+          transition: top 0.3s, -webkit-transform 0.3s 0.3s;
+          transition: top 0.3s, transform 0.3s 0.3s;
+          transition: top 0.3s, transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s; }
+    nav .container ul {
+      background: transparent;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: calc(100vh + 20px);
+      z-index: 500;
+      text-align: center;
+      padding: 3.25rem 0 0 0;
+      -webkit-transition: background 0.3s ease-in;
+      transition: background 0.3s ease-in;
+      display: none;
+      margin: 1rem 0 0; }
+      nav .container ul.navOpen {
+        display: block;
+        background: rgba(33, 50, 95, 0.95); }
+      nav .container ul li {
+        display: block;
+        z-index: 20;
+        padding: 3rem 0; }
+        nav .container ul li:before {
+          display: none; }
+        nav .container ul li a {
+          color: #FFFFFF;
+          font-size: 2.5rem;
+          letter-spacing: 0.2rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          padding: 0 0 0.5rem; }
+
+/*
+------------------------------
+06. HOME PAGE
+------------------------------
+*/
+.page.home {
+  position: relative;
+  top: -35px; }
+  .page.home .hero {
+    position: relative;
+    height: 95vh;
+    background: no-repeat 50% 50%;
+    background-size: cover;
+    margin: 0 0 2rem;
+    background-attachment: fixed;
+    border-bottom: 1rem solid #21325F; }
+    .page.home .hero .overlay {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(105deg, rgba(33, 50, 95, 0.65), rgba(23, 87, 139, 0.5)); }
+    .page.home .hero .container img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      max-width: 500px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+  .page.home .section {
+    padding: 4rem 0; }
+  @media all and (min-width: 768px) {
+    .page.home #about .copy {
+      -webkit-column-count: 2;
+              column-count: 2; } }
+  .page.home #services {
+    background-color: #FFEEE3;
+    position: relative;
+    text-align: center; }
+    .page.home #services:before, .page.home #services:after {
+      content: '';
+      display: block;
+      width: 100%;
+      background-color: #FFEEE3;
+      height: 0.5rem;
+      position: absolute; }
+    .page.home #services:before {
+      top: -1.1rem; }
+    .page.home #services:after {
+      bottom: -1.1rem; }
+    .page.home #services .service {
+      display: block;
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+      border: 3px solid #21325F;
+      background-color: #FFEEE3;
+      position: relative;
+      margin: 0 auto 2rem;
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+      .page.home #services .service:hover {
+        cursor: pointer;
+        border: 3px solid #17578B; }
+        .page.home #services .service:hover:after {
+          background: #17578B; }
+        .page.home #services .service:hover h3 {
+          top: 45%;
+          color: #FFFFFF; }
+        .page.home #services .service:hover h6 {
+          top: 70%;
+          opacity: 1;
+          color: #FFFFFF; }
+      .page.home #services .service:after {
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        content: '';
+        display: block;
+        width: 190px;
+        height: 190px;
+        background-color: #21325F;
+        border-radius: 190px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+      @media all and (min-width: 768px) {
+        .page.home #services .service {
+          display: inline-block;
+          margin: 0 1rem 2rem; } }
+      .page.home #services .service h3 {
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        z-index: 5;
+        position: absolute;
+        color: #FFFFFF;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+      .page.home #services .service h6 {
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        z-index: 5;
+        position: absolute;
+        opacity: 0;
+        top: 65%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+
+/*
+------------------------------
+14. FORM
+------------------------------
+*/
+/*
+------------------------------
+15. FOOTER
+------------------------------
+*/
+footer {
+  padding: 1rem 0;
+  background-color: #21325F;
+  text-align: center; }
+  footer .footerSection {
+    text-align: center;
+    margin: 0 auto; }
+    footer .footerSection a {
+      color: #FFFFFF;
+      padding: 0 1rem; }
+      footer .footerSection a:hover {
+        color: #FFEEE3; }
+    footer .footerSection:first-of-type {
+      margin: 0 0 1rem; }
+    footer .footerSection small {
+      color: #FFFFFF; }

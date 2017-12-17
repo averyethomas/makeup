@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--STYLES-->
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!--JAVASCRIPT-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <!--FONT AWESOME-->
+    <script src="https://use.fontawesome.com/879fcc8444.js"></script>
+  </head>
+  <body data-ng-app="angularApp" data-ng-controller="mainCtrl" data-ng-class="{'navOpen' : navToggle}">
+    <nav>
+      <div class="container">
+        <div class="mobileMenu" data-ng-click="navToggle = ! navToggle" data-ng-class="{'navOpen' : navToggle}"><span></span></div>
+        <ul data-ng-class="{'navOpen' : navToggle}">
+          <li><a data-ng-click="navToggle = ! navToggle" href="#about">About</a></li>
+          <li><a data-ng-click="navToggle = ! navToggle" href="#services">Services</a></li>
+          <li><a data-ng-click="navToggle = ! navToggle" href="#book">Book</a></li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>
+<div class="page home">
+  <div class="hero" style="background-image: url('/images/fpo/hero.jpg');">
+    <div class="overlay"></div>
+    <div class="container"><img src="/images/wink-logo.png"></div>
+  </div>
+  <div class="section" id="about">
+    <div class="container">
+      <h2>About</h2>
+      <div class="copy">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor sem, elementum viverra massa id, pharetra molestie felis. Integer eleifend, augue elementum mattis sollicitudin, turpis justo ornare ipsum, eget maximus leo est a tellus. Phasellus molestie lacinia congue. Donec nec mi massa. Sed quis laoreet augue. Vivamus tincidunt mi ante, ut dapibus augue cursus et. Morbi quis pellentesque nulla. Vestibulum quis eleifend neque. Cras vel faucibus purus, a semper libero. Morbi laoreet tortor ut arcu tincidunt, sit amet molestie nisl tincidunt. Aliquam et massa placerat, sollicitudin lectus ut, iaculis libero.</p>
+        <p>Fusce molestie pellentesque pretium. Cras tristique, dolor sit amet luctus posuere, turpis nulla tincidunt arcu, at molestie sapien odio non odio. Donec molestie, diam a laoreet posuere, arcu nulla consectetur diam, vel posuere dolor tortor nec sem. Aliquam posuere tincidunt ex, at pellentesque neque facilisis vel.</p>
+        <p>Integer vitae consequat turpis. Vivamus congue arcu dolor, vitae volutpat magna pretium ac. Nulla nisi nisi, congue at tincidunt quis, hendrerit eget velit. Quisque feugiat diam sed lacus cursus, id tristique nibh consectetur. Praesent a turpis vitae dolor cursus blandit in sed velit. Maecenas libero nunc, iaculis ut dapibus sed, tempus id lectus. Nam vehicula pretium lacinia. Pellentesque blandit tellus sodales gravida rutrum. Donec a ligula ut mi suscipit tincidunt id et nisl. Nullam ultrices arcu eget laoreet efficitur. Quisque in ante imperdiet, gravida risus non, pellentesque tortor. Pellentesque finibus urna sed justo iaculis, et lacinia massa blandit. Nunc ultricies eros sed odio placerat suscipit. Proin ornare felis augue.</p>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="service">
+        <h3>Brides</h3>
+        <h6>LEARN MORE</h6>
+      </div>
+      <div class="service">
+        <h3>Special Events</h3>
+        <h6>LEARN MORE</h6>
+      </div>
+      <div class="service">
+        <h3>Prom</h3>
+        <h6>LEARN MORE</h6>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="book">
+    <div class="container">
+      <h2>Book</h2>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="footerSection"><a href="tel:">704-XXX-XXXX</a><a href="mailto:">email@email.com</a></div>
+    <div class="footerSection"><small>&copy; Copyright 2017, Wink Inspired Beauty.</small></div>
+  </div>
+</footer>
