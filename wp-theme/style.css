@@ -1,13 +1,13 @@
 /*
-Theme Name: MolloyKaye
-Theme URI: molloykayeretail.com
+Theme Name: Wink Inspired Beauty
+Theme URI: experiencewink.com
 Author: Avery Thomas
 Author URI: averyethomas.com
-Description: Theme created by Avery Thomas for Molloy Kaye
+Description: Theme created by Avery Thomas for Ashland Advertising & Wink Inspired Beauty
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: INSERT TAGS HERE SEPARATED BY COMMAS
+Tags: responsive, single page
 Text Domain: themename
 
 This theme, like WordPress, is licensed under the GPL.
@@ -307,10 +307,9 @@ nav {
       transform: translate(-50%, -50%); }
   .page.home .section {
     padding: 4rem 0; }
-  @media all and (min-width: 768px) {
-    .page.home #about .copy {
-      -webkit-column-count: 2;
-              column-count: 2; } }
+  .page.home #about .copy {
+    max-width: 700px;
+    margin: 0 auto; }
   .page.home #services {
     background-color: #FFEEE3;
     position: relative;
@@ -328,11 +327,12 @@ nav {
       bottom: -1.1rem; }
     .page.home #services .service {
       display: block;
-      width: 200px;
-      height: 200px;
-      border-radius: 200px;
+      width: 250px;
+      height: 250px;
+      border-radius: 250px;
       border: 3px solid #21325F;
-      background-color: #FFEEE3;
+      background: no-repeat 50% 50%;
+      background-size: cover;
       position: relative;
       margin: 0 auto 2rem;
       -webkit-transition: all 0.5s ease-in-out;
@@ -341,7 +341,7 @@ nav {
         cursor: pointer;
         border: 3px solid #17578B; }
         .page.home #services .service:hover:after {
-          background: #17578B; }
+          background: rgba(23, 87, 139, 0.8); }
         .page.home #services .service:hover h3 {
           top: 45%;
           color: #FFFFFF; }
@@ -354,10 +354,11 @@ nav {
         transition: all 0.5s ease-in-out;
         content: '';
         display: block;
-        width: 190px;
-        height: 190px;
-        background-color: #21325F;
-        border-radius: 190px;
+        width: 238px;
+        height: 238px;
+        border: 3px solid #FFEEE3;
+        background-color: rgba(33, 50, 95, 0.45);
+        border-radius: 244px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -387,12 +388,156 @@ nav {
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); }
+    .page.home #services .modal {
+      display: block;
+      position: absolute;
+      z-index: 100;
+      border: 1px solid #21325F;
+      background: #21325F;
+      padding: 3.75rem 2rem 2rem;
+      width: 90%;
+      max-width: 750px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: left; }
+      .page.home #services .modal p {
+        color: #FFFFFF; }
+      .page.home #services .modal em {
+        font-style: italic; }
+      .page.home #services .modal .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 25px;
+        height: 25px;
+        z-index: 200; }
+        .page.home #services .modal .close:hover span:before, .page.home #services .modal .close:hover span:after {
+          background: #17578B; }
+        .page.home #services .modal .close span {
+          background: transparent;
+          position: relative; }
+          .page.home #services .modal .close span:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 1rem;
+            right: -2rem;
+            width: 2rem;
+            background: #FFEEE3;
+            height: .3rem;
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+            -webkit-transition: top 0.3s, -webkit-transform 0.3s 0.3s;
+            transition: top 0.3s, -webkit-transform 0.3s 0.3s;
+            transition: top 0.3s, transform 0.3s 0.3s;
+            transition: top 0.3s, transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s; }
+          .page.home #services .modal .close span:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 1rem;
+            right: -2rem;
+            width: 2rem;
+            background: #FFEEE3;
+            height: .3rem;
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+            -webkit-transition: top 0.3s, -webkit-transform 0.3s 0.3s;
+            transition: top 0.3s, -webkit-transform 0.3s 0.3s;
+            transition: top 0.3s, transform 0.3s 0.3s;
+            transition: top 0.3s, transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s; }
+    .page.home #services a.cta {
+      display: block;
+      width: 220px;
+      padding: 0.7rem 1rem;
+      margin: 4rem auto 2rem;
+      text-transform: uppercase;
+      background: #21325F;
+      color: #FFFFFF; }
+      .page.home #services a.cta:hover {
+        background: #17578B; }
 
 /*
 ------------------------------
 14. FORM
 ------------------------------
 */
+.page #booking_form_div1 {
+  text-align: center; }
+
+@media all and (min-width: 768px) {
+  .page .wpbc_structure_form {
+    display: inline-block;
+    width: calc((100%/2) - 1rem);
+    vertical-align: top;
+    max-width: 284px;
+    margin: 0 1rem; } }
+
+.page .wpbc_structure_form .form-group {
+  margin: 0 0 1rem;
+  text-align: left; }
+  .page .wpbc_structure_form .form-group label {
+    font-family: "Raleway", sans-serif;
+    color: #21325F;
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+  .page .wpbc_structure_form .form-group .controls input, .page .wpbc_structure_form .form-group .controls textarea {
+    border-radius: 0; }
+  .page .wpbc_structure_form .form-group input[type="text"] {
+    border-radius: 0 !important; }
+  .page .wpbc_structure_form .form-group button {
+    background: #21325F;
+    color: #FFFFFF;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    text-shadow: none;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0; }
+    .page .wpbc_structure_form .form-group button:hover {
+      background: #17578B; }
+
+@media all and (min-width: 768px) {
+  .page .wpbc_structure_calendar {
+    display: inline-block;
+    width: calc((100%/2) - 1rem);
+    vertical-align: top;
+    max-width: 284px;
+    margin: 0 1rem 1rem; } }
+
+.page .wpbc_structure_calendar .datepick-inline {
+  border: 1px solid #21325F;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .page .wpbc_structure_calendar .datepick-inline .calendar-links {
+    background: none;
+    background-color: #21325F;
+    border-bottom: 1px solid #21325F; }
+
+.page .wpbc_structure_calendar .datepick-header span {
+  font-family: "Raleway", sans-serif;
+  color: #FFFFFF;
+  font-weight: 300;
+  text-shadow: none; }
+
+.page .wpbc_structure_calendar .datepick-days-cell span {
+  font-family: "Raleway", sans-serif;
+  text-shadow: none;
+  color: #21325F; }
+
+.page .wpbc_structure_calendar .date_available {
+  color: #21325F;
+  text-shadow: none; }
+
+.page .wpbc_structure_calendar .datepick .datepick-title-row th span {
+  font-family: "Raleway", sans-serif;
+  text-shadow: none;
+  color: #21325F; }
+
 /*
 ------------------------------
 15. FOOTER

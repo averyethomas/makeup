@@ -176,9 +176,8 @@ nav {
     }
     #about{
       .copy{
-        @media all and (min-width: 768px){
-          column-count: 2;
-        }
+        max-width: 700px;
+        margin: 0 auto;
       }
     }
     #services{
@@ -205,11 +204,12 @@ nav {
       
       .service{
         display: block;
-        width: 200px;
-        height: 200px;
-        border-radius: 200px;
+        width: 250px;
+        height: 250px;
+        border-radius: 250px;
         border: 3px solid $primary;
-        background-color: $highlight;
+        background: no-repeat 50% 50%;
+        background-size: cover;
         position: relative;
         margin: 0 auto 2rem;
         transition: all 0.5s ease-in-out;
@@ -219,7 +219,7 @@ nav {
           border: 3px solid $secondary;
           
           &:after{
-            background: $secondary; 
+            background: rgba($secondary, 0.8); 
           }
           
           h3{
@@ -237,10 +237,11 @@ nav {
           transition: all 0.5s ease-in-out;
           content: '';
           display: block;
-          width: 190px;
-          height: 190px;
-          background-color: $primary;
-          border-radius: 190px;
+          width: 238px;
+          height: 238px;
+          border: 3px solid $highlight;
+          background-color: rgba($primary, 0.45);
+          border-radius: 244px;
           position: absolute;
           top: 50%;
           left: 50%;
@@ -275,6 +276,85 @@ nav {
           transform: translate(-50%, -50%);
         }
       }
+      .modal{
+        display: block;
+        position: absolute;
+        z-index: 100;
+        border: 1px solid $primary;
+        background: $primary;
+        padding: 3.75rem 2rem 2rem;
+        width: 90%;
+        max-width: 750px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: left;
+        p{
+          color: $white;
+        }
+        em{
+          font-style: italic;
+        }
+        .close{
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          width: 25px;
+          height: 25px;
+          z-index: 200;
+          &:hover{
+            span{
+              &:before, &:after{
+                background: $secondary;
+              }
+            }
+          }
+          span{
+            background: transparent;
+            position: relative;
+            
+            &:before{
+              content: '';
+              position: absolute;
+              display: block;
+              top:1rem;
+              right: -2rem;
+              width: 2rem;
+              background: $highlight;
+              height: .3rem;
+              transform: rotate(45deg);
+              transition: top 0.3s, transform 0.3s 0.3s;
+            }
+
+            &:after{
+              content: '';
+              position: absolute;
+              display: block;
+              top: 1rem;
+              right: -2rem;
+              width: 2rem;
+              background: $highlight;
+              height: .3rem;
+              transform: rotate(-45deg);
+              transition: top 0.3s, transform 0.3s 0.3s;
+            }
+          }
+        }
+      }
+      a.cta{
+        display: block;
+        width: 220px;
+        padding: 0.7rem 1rem;
+        margin: 4rem auto 2rem;
+        text-transform: uppercase;
+        background: $primary;
+        color: $white;
+        
+        &:hover{
+          background: $secondary;
+        }
+      }
     }
   }
 }
@@ -284,6 +364,104 @@ nav {
 14. FORM
 ------------------------------
 */
+
+.page{
+  #booking_form_div1{
+    text-align: center;
+  }
+  .wpbc_structure_form{
+    @media all and (min-width: 768px){
+      display: inline-block;
+      width: calc((100%/2) - 1rem);
+      vertical-align: top;
+      max-width: 284px;
+      margin: 0 1rem;
+    }
+    .form-group{
+      margin: 0 0 1rem;
+      text-align: left;
+      label{
+        font-family: $sansSerif;
+        color: $primary;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+      }
+      .controls{
+        input, textarea{
+          border-radius: 0;
+        }
+      }
+      input[type="text"]{
+        border-radius: 0 !important;
+      }
+      button{
+        background: $primary;
+        color: $white;
+        font-family: $sansSerif;
+        text-transform: uppercase;
+        text-shadow: none;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        
+        &:hover{
+          background: $secondary;
+        }
+      }
+    }
+  }
+  .wpbc_structure_calendar{
+    @media all and (min-width: 768px){
+      display: inline-block;
+      width: calc((100%/2) - 1rem);
+      vertical-align: top;
+      max-width: 284px;
+      margin: 0 1rem 1rem;
+    }
+    .datepick-inline{
+      border: 1px solid $primary;
+      border-radius: 0;
+      box-shadow: none;
+      
+      .calendar-links{
+        background: none;
+        background-color: $primary;
+        border-bottom: 1px solid $primary;
+      }
+    }
+    .datepick-header{
+      span{
+        font-family: $sansSerif;
+        color: $white;
+        font-weight: 300;
+        text-shadow: none;
+      }
+      
+    }
+    .datepick-days-cell{
+      span{
+        font-family: $sansSerif;
+        text-shadow: none;
+        color: $primary;
+      }
+    }
+    .date_available{
+      color: $primary;
+      text-shadow: none;
+    }
+    .datepick{
+      .datepick-title-row{
+        th{
+          span{
+            font-family: $sansSerif;
+            text-shadow: none;
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
 
 /*
 ------------------------------

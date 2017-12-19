@@ -10,10 +10,10 @@
 <body data-ng-app="angularApp" data-ng-controller="mainCtrl" data-ng-class="{'navOpen' : navToggle}">
     <nav>
         <div class="container">
-            <div class="mobileMenu" ng-click="navToggle = ! navToggle" ng-class="{'navOpen' : navToggle}">
+            <div class="mobileMenu" data-ng-click="navToggle = ! navToggle" data-ng-class="{'navOpen' : navToggle}">
                 <span></span>
             </div>
-            <ul ng-class="{'navOpen' : navToggle}">
+            <ul data-ng-class="{'navOpen' : navToggle}" data-ng-click="navToggle = ! navToggle">
                 <?php main_nav(); ?>
             </ul>    
         </div>
