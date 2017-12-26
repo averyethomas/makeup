@@ -31,6 +31,16 @@ h1, h2, h3, h4, h5, h6, p, a, small, b, strong, em, i{
   font-family: $sansSerif;
 }
 
+h1{
+  font-weight: 300;
+  font-size: 4.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin: 0 0 3rem;
+  color: $highlight;
+}
+
 h2{
   font-weight: 300;
   font-size: 4rem;
@@ -64,6 +74,14 @@ p{
   font-weight: 300;
   margin: 0 0 1rem;
   color: $primary;
+  
+  em, i{
+    font-style: italic;
+  }
+  
+  strong, b{
+    font-weight: 700;
+  }
 }
 
 a{

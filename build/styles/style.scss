@@ -5,6 +5,9 @@
 04. NAVIGATION
 ------------------------------
 */
+.page{
+  min-height: calc(100vh - 35px);
+}
 .navOpen{
   overflow-y: hidden;
   
@@ -17,8 +20,10 @@ nav {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   z-index: 100;
+  top: 0;
+  right: 0;
   
   .container {
     max-width: 100%;
@@ -133,13 +138,13 @@ nav {
 
 /*
 ------------------------------
-06. HOME PAGE
+05. HOME PAGE
 ------------------------------
 */
 .page{
   &.home{
     position: relative;
-    top: -35px;
+    top: 0;
     
     .hero{
       position: relative;
@@ -173,11 +178,15 @@ nav {
     }
     .section{
       padding: 4rem 0;
-    }
-    #about{
+      
       .copy{
         max-width: 700px;
-        margin: 0 auto;
+        margin: 0 auto 2rem;
+      }
+    }
+    #book{
+      .copy{
+        margin: 0 auto 4rem;
       }
     }
     #services{
@@ -356,12 +365,81 @@ nav {
         }
       }
     }
+  
+    #founder{
+      background-color: $highlight;
+      position: relative;
+      
+      &:before{
+        content: '';
+        display: block;
+        width: 100%;
+        background-color: $highlight;
+        height: 0.5rem;
+        position: absolute;
+      }
+      
+      &:before{
+        top: -1.1rem;
+      }
+    }
   }
 }
 
 /*
 ------------------------------
-14. FORM
+06. SINGLE PAGE
+------------------------------
+*/
+
+.page{
+  &.single{
+    .hero{
+      position: relative;
+      height: 50vh;
+      min-height: 300px;
+      background: no-repeat 50% 50%;
+      background-size: cover;
+      margin: 0 0 2rem;
+      background-attachment: fixed;
+      border-bottom: 1rem solid $primary;
+      
+      .overlay{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient( 105deg, rgba($primary, 0.65), rgba($secondary, 0.5));
+      }
+      
+      .container{
+        h1{
+          display: block;
+          position: absolute;
+          width: 100%;
+          max-width: 500px;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          z-index: 100;
+        }
+      }
+    }
+    .section{
+      padding: 4rem 0;
+
+      .copy{
+        max-width: 700px;
+        margin: 0 auto 2rem;
+      }
+    }
+  }
+}
+
+/*
+------------------------------
+07. BOOKING FORM/CALENDAR
 ------------------------------
 */
 
@@ -465,7 +543,7 @@ nav {
 
 /*
 ------------------------------
-15. FOOTER
+08. FOOTER
 ------------------------------
 */
 footer{

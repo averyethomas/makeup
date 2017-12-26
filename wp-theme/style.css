@@ -113,6 +113,15 @@ body {
 h1, h2, h3, h4, h5, h6, p, a, small, b, strong, em, i {
   font-family: "Raleway", sans-serif; }
 
+h1 {
+  font-weight: 300;
+  font-size: 4.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin: 0 0 3rem;
+  color: #FFEEE3; }
+
 h2 {
   font-weight: 300;
   font-size: 4rem;
@@ -143,6 +152,10 @@ p {
   font-weight: 300;
   margin: 0 0 1rem;
   color: #21325F; }
+  p em, p i {
+    font-style: italic; }
+  p strong, p b {
+    font-weight: 700; }
 
 a {
   text-decoration: none;
@@ -165,6 +178,9 @@ a {
 04. NAVIGATION
 ------------------------------
 */
+.page {
+  min-height: calc(100vh - 35px); }
+
 .navOpen {
   overflow-y: hidden; }
   .navOpen nav {
@@ -174,8 +190,10 @@ nav {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  position: relative;
-  z-index: 100; }
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0; }
   nav .container {
     max-width: 100%;
     padding: 0 1.5rem; }
@@ -276,12 +294,12 @@ nav {
 
 /*
 ------------------------------
-06. HOME PAGE
+05. HOME PAGE
 ------------------------------
 */
 .page.home {
   position: relative;
-  top: -35px; }
+  top: 0; }
   .page.home .hero {
     position: relative;
     height: 95vh;
@@ -307,9 +325,11 @@ nav {
       transform: translate(-50%, -50%); }
   .page.home .section {
     padding: 4rem 0; }
-  .page.home #about .copy {
-    max-width: 700px;
-    margin: 0 auto; }
+    .page.home .section .copy {
+      max-width: 700px;
+      margin: 0 auto 2rem; }
+  .page.home #book .copy {
+    margin: 0 auto 4rem; }
   .page.home #services {
     background-color: #FFEEE3;
     position: relative;
@@ -458,10 +478,59 @@ nav {
       color: #FFFFFF; }
       .page.home #services a.cta:hover {
         background: #17578B; }
+  .page.home #founder {
+    background-color: #FFEEE3;
+    position: relative; }
+    .page.home #founder:before {
+      content: '';
+      display: block;
+      width: 100%;
+      background-color: #FFEEE3;
+      height: 0.5rem;
+      position: absolute; }
+    .page.home #founder:before {
+      top: -1.1rem; }
 
 /*
 ------------------------------
-14. FORM
+06. SINGLE PAGE
+------------------------------
+*/
+.page.single .hero {
+  position: relative;
+  height: 50vh;
+  min-height: 300px;
+  background: no-repeat 50% 50%;
+  background-size: cover;
+  margin: 0 0 2rem;
+  background-attachment: fixed;
+  border-bottom: 1rem solid #21325F; }
+  .page.single .hero .overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(105deg, rgba(33, 50, 95, 0.65), rgba(23, 87, 139, 0.5)); }
+  .page.single .hero .container h1 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 100; }
+
+.page.single .section {
+  padding: 4rem 0; }
+  .page.single .section .copy {
+    max-width: 700px;
+    margin: 0 auto 2rem; }
+
+/*
+------------------------------
+07. BOOKING FORM/CALENDAR
 ------------------------------
 */
 .page #booking_form_div1 {
@@ -540,7 +609,7 @@ nav {
 
 /*
 ------------------------------
-15. FOOTER
+08. FOOTER
 ------------------------------
 */
 footer {

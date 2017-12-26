@@ -60,8 +60,19 @@
   </div>
   <div class="section" id="book">
     <div class="container">
-      <h2>Book</h2>
+      <h2><?php the_field('booking_section_title'); ?></h2>
+      <div class="copy">
+        <?php the_field('booking_instructions'); ?>
+      </div>
       <?php echo do_shortcode('[booking]'); ?>
+    </div>
+  </div>
+  <div class="section" id="founder">
+    <div class="container">
+      <h2><?php the_field('about_founder_section_title'); ?></h2>
+      <div class="copy">
+        <?php the_field('about_founder'); ?>
+      </div>
     </div>
   </div>
 </div>
