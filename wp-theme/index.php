@@ -19,6 +19,7 @@
    
 <?php endif;
 ?>
+      <h1><?php bloginfo('description'); ?></h1>
     </div>
   </div>
   <div class="section" id="about">
@@ -40,13 +41,13 @@
         $item = get_sub_field('title');
         $showHideItem = strtolower(str_replace(' ', '', $item));
 ?>
-      <div data-ng-click="<?php echo $showHideItem; ?> = true" class="service" style="background-image: url(<?php echo $bg['url']; ?>);">
+      <a class="service" href="<?php the_sub_field('link'); ?>" data-ng-mouseover="<?php echo $showHideItem; ?> = true"  style="background-image: url(<?php echo $bg['url']; ?>);">
         <h3><?php the_sub_field('title'); ?></h3>
-        <h6>LEARN MORE</h6>
-      </div>
-      <div class="modal" data-ng-show="<?php echo $showHideItem; ?>">
-        <div class="close" data-ng-click="<?php echo $showHideItem; ?> = false"><span></span></div>
+      </a>
+      <div class="modal" data-ng-show="<?php echo $showHideItem; ?>" data-ng-mouseleave="<?php echo $showHideItem; ?> = false">
+        <h3><?php the_sub_field('title'); ?></h3>
         <?php the_sub_field('copy'); ?>
+        <a class="cta" href="<?php the_sub_field('link') ?>">Learn More</a>
       </div>
 <?php   endwhile;
       endif;

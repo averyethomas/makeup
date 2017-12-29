@@ -10,7 +10,7 @@ $secondary: #17578B;
 $highlight: #FFEEE3;
 
 //TYPOGRAPHY
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,300,400,700');
 $sansSerif: 'Raleway', sans-serif;
 
 /*
@@ -88,6 +88,22 @@ a{
   text-decoration: none;
   font-size: 1.5rem;
   line-height: 2rem;
+  color: $secondary;
+  
+  &.cta{
+    text-align: center;
+    display: block;
+    width: 220px;
+    padding: 0.7rem 1rem;
+    margin: 4rem auto 2rem;
+    text-transform: uppercase;
+    background: $primary;
+    color: $white;
+    
+    &:hover{
+      background: $secondary;
+    }
+  }
 }
 
 /*
