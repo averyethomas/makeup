@@ -189,8 +189,8 @@ nav {
           font-weight: 100;
           
           @media all and (min-width: 768px){
-            font-size: 3rem;
-            line-height: 3.5rem;
+            font-size: 2.5rem;
+            line-height: 3rem;
           }
         }
       }
@@ -203,15 +203,9 @@ nav {
         margin: 0 auto 2rem;
       }
     }
-    #book{
-      .copy{
-        margin: 0 auto 4rem;
-      }
-    }
-    #services{
+    #about{
       background-color: $highlight;
       position: relative;
-      text-align: center;
       
       &:before, &:after{
         content: '';
@@ -230,6 +224,17 @@ nav {
         bottom: -1.1rem;
       }
       
+    }
+    #book{
+      .copy{
+        margin: 0 auto 4rem;
+      }
+    }
+    #services{
+      position: relative;
+      text-align: center;
+      
+     
       .service{
         display: block;
         width: 250px;
@@ -257,7 +262,7 @@ nav {
           display: block;
           width: 238px;
           height: 238px;
-          border: 3px solid $highlight;
+          border: 3px solid $white;
           background-color: rgba($primary, 0.45);
           border-radius: 244px;
           position: absolute;
@@ -549,6 +554,26 @@ nav {
       }
     }
     .date_available{
+      color: $primary;
+      text-shadow: none;
+    }
+    .datepick-inline .date2approve{
+      background-color: $primary;
+      color: $highlight;
+      text-shadow: none;
+      span{
+        color: $highlight;
+      }
+    }
+    .datepick-inline .calendar-links .datepick-prev a, .datepick-inline .calendar-links .datepick-next a{
+      text-shadow: none;
+      color: $highlight;
+    }
+    .datepick-inline .datepick-one-month .datepick .datepick-current-day{
+      background-color: $secondary;
+      text-shadow: noen;
+    }
+    .datepick-unselectable{
       color: $primary;
       text-shadow: none;
     }

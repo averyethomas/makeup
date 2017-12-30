@@ -22,14 +22,6 @@
       <h1><?php bloginfo('description'); ?></h1>
     </div>
   </div>
-  <div class="section" id="about">
-    <div class="container">
-      <h2>About</h2>
-      <div class="copy">
-        <?php the_field('about'); ?>
-      </div>
-    </div>
-  </div>
   <div class="section" id="services">
     <div class="container">
       <h2>Services</h2>
@@ -57,6 +49,14 @@
       <a class="cta" href="<?php echo $book; ?>" target="_blank">Wink Inspiration Book</a>
 <?php endif;
 ?>
+    </div>
+  </div>
+  <div class="section" id="about">
+    <div class="container">
+      <h2>About</h2>
+      <div class="copy">
+        <?php the_field('about'); ?>
+      </div>
     </div>
   </div>
   <div class="section" id="book">

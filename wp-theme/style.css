@@ -133,6 +133,21 @@ h3 {
   letter-spacing: 0.2rem;
   color: #FFEEE3; }
 
+h4 {
+  font-weight: 100;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+  color: #17578B;
+  margin: 0 0 1rem; }
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+  margin: 0 0 1rem;
+  color: #21325F; }
+
 h6 {
   font-size: 1.2rem;
   line-height: 2rem;
@@ -150,6 +165,12 @@ p {
     font-style: italic; }
   p strong, p b {
     font-weight: 700; }
+
+em, i {
+  font-style: italic; }
+
+strong, b {
+  font-weight: 700; }
 
 a {
   text-decoration: none;
@@ -343,30 +364,32 @@ nav {
         font-weight: 100; }
         @media all and (min-width: 768px) {
           .page.home .hero .container h1 {
-            font-size: 3rem;
-            line-height: 3.5rem; } }
+            font-size: 2.5rem;
+            line-height: 3rem; } }
   .page.home .section {
     padding: 4rem 0; }
     .page.home .section .copy {
       max-width: 700px;
       margin: 0 auto 2rem; }
-  .page.home #book .copy {
-    margin: 0 auto 4rem; }
-  .page.home #services {
+  .page.home #about {
     background-color: #FFEEE3;
-    position: relative;
-    text-align: center; }
-    .page.home #services:before, .page.home #services:after {
+    position: relative; }
+    .page.home #about:before, .page.home #about:after {
       content: '';
       display: block;
       width: 100%;
       background-color: #FFEEE3;
       height: 0.5rem;
       position: absolute; }
-    .page.home #services:before {
+    .page.home #about:before {
       top: -1.1rem; }
-    .page.home #services:after {
+    .page.home #about:after {
       bottom: -1.1rem; }
+  .page.home #book .copy {
+    margin: 0 auto 4rem; }
+  .page.home #services {
+    position: relative;
+    text-align: center; }
     .page.home #services .service {
       display: block;
       width: 250px;
@@ -391,7 +414,7 @@ nav {
         display: block;
         width: 238px;
         height: 238px;
-        border: 3px solid #FFEEE3;
+        border: 3px solid #FFFFFF;
         background-color: rgba(33, 50, 95, 0.45);
         border-radius: 244px;
         position: absolute;
@@ -623,6 +646,25 @@ nav {
   color: #21325F; }
 
 .page .wpbc_structure_calendar .date_available {
+  color: #21325F;
+  text-shadow: none; }
+
+.page .wpbc_structure_calendar .datepick-inline .date2approve {
+  background-color: #21325F;
+  color: #FFEEE3;
+  text-shadow: none; }
+  .page .wpbc_structure_calendar .datepick-inline .date2approve span {
+    color: #FFEEE3; }
+
+.page .wpbc_structure_calendar .datepick-inline .calendar-links .datepick-prev a, .page .wpbc_structure_calendar .datepick-inline .calendar-links .datepick-next a {
+  text-shadow: none;
+  color: #FFEEE3; }
+
+.page .wpbc_structure_calendar .datepick-inline .datepick-one-month .datepick .datepick-current-day {
+  background-color: #17578B;
+  text-shadow: noen; }
+
+.page .wpbc_structure_calendar .datepick-unselectable {
   color: #21325F;
   text-shadow: none; }
 

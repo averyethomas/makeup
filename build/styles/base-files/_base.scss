@@ -60,6 +60,23 @@ h3{
   color: $highlight;
 }
 
+h4{
+  font-weight: 100;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+  color: $secondary;
+  margin: 0 0 1rem;
+}
+
+h5{
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+  margin: 0 0 1rem;
+  color: $primary;
+}
+
 h6{
   font-size: 1.2rem;
   line-height: 2rem;
@@ -82,6 +99,14 @@ p{
   strong, b{
     font-weight: 700;
   }
+}
+
+em, i{
+  font-style: italic;
+}
+  
+strong, b{
+  font-weight: 700;
 }
 
 a{
